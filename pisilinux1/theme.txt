@@ -1,0 +1,62 @@
+# Arch-Silence theme for GRUB2
+#
+# Copyright (C) 2015 Filippo Ghibellini
+
+#general settings
+title-text: ""
+desktop-color: "#31363b"
+
+terminal-font: "Dejavu Sans Regular 12"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
+#progress bar
++ progress_bar {
+	id = "__timeout__"
+	left = 0
+	top = 0
+	height = 20
+	width = 100%
+	show_text = false
+
+	# just two vertical pixels of color #fff
+    bar_style = "progress_bar/progress_bar_*.png"
+    highlight_style = "progress_bar/progress_bar_hl_*.png"
+}
+
+# pisi logo
++ image {
+	top = 50%-250
+	left = 50%-100
+    file = "pisi.png"
+}
+
+#boot menu
++ boot_menu {
+	left = 50%-250
+	width = 1000
+	top = 50%+50
+	height = 300
+
+	item_font = "DejaVu Sans Bold 14"
+	item_color = "#919396"
+	selected_item_font = "DejaVu Sans Bold 14"
+	selected_item_color= "#fff"
+
+	item_height = 26
+	item_padding = 0
+	item_icon_space = 0
+	item_spacing = 1
+	scrollbar = true
+}
+
+#help bar at the bottom
++ image {
+	top = 100%-56
+	left = 50%-175
+    file = "help_bar.png"
+}
+
